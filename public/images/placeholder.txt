@@ -1,0 +1,32 @@
+# Папка для изображений
+
+Поместите сюда следующие изображения:
+
+## Галерея (public/images/gallery/)
+- mountain-view-1.jpg - Вид на гору с востока
+- mountain-view-2.jpg - Вершина горы
+- mountain-view-3.jpg - Зеленые склоны
+- mountain-view-4.jpg - Пещера
+- mountain-view-5.jpg - Закат
+- mountain-view-6.jpg - Туристы
+- mountain-view-7.jpg - Родник
+- mountain-view-8.jpg - Ночной вид
+
+## Раздел "О горе" (public/images/)
+- geology.jpg - Геологическое чудо
+- biodiversity.jpg - Биоразнообразие
+- culture.jpg - Культурное наследие
+- tourism.jpg - Туристический потенциал
+
+## Легенда (public/images/)
+- legend-1.jpg - Начало легенды
+- legend-2.jpg - Великий потоп
+- legend-3.jpg - Новое начало
+- legend-4.jpg - Священное место
+
+## Другие
+- mountain-poster.jpg - Постер для видео
+
+Все изображения должны быть оптимизированы для веб-использования.
+Рекомендуемые форматы: WebP, AVIF, JPEG
+Рекомендуемые размеры: 1920x1080 для фоновых, 800x600 для галереи
