@@ -3,7 +3,6 @@
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
 import { X, ChevronLeft, ChevronRight, Download, Heart, Share2 } from 'lucide-react'
-import { mediaConfig } from '../config/media'
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
@@ -14,7 +13,7 @@ const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: mediaConfig.gallery.mountainView1,
+      src: "/images/mountain-view-1.jpg",
       alt: "Қазығұрт тауының шығыстан көрінісі",
       title: "Қазығұрт үстіндегі күн шығу",
       description: "Таңғы күн сәулелеріндегі таудың керемет көрінісі",
@@ -22,7 +21,7 @@ const Gallery = () => {
     },
     {
       id: 2,
-      src: mediaConfig.gallery.mountainView2,
+      src: "/images/mountain-view-2.jpg",
       alt: "Қазығұрт тауының шыңы",
       title: "Аңыздың шыңы",
       description: "Аңыз бойынша Нұх кемесі тоқтаған сырлы шың",
@@ -30,7 +29,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      src: mediaConfig.gallery.mountainView3,
+      src: "/images/mountain-view-3.jpg",
       alt: "Қазығұрт тауының беткейлері",
       title: "Жасыл беткейлер",
       description: "Тау беткейлеріндегі бай өсімдіктер",
@@ -38,7 +37,7 @@ const Gallery = () => {
     },
     {
       id: 4,
-      src: mediaConfig.gallery.mountainView4,
+      src: "/images/mountain-view-4.jpg",
       alt: "Қазығұрт тауындағы үңгір",
       title: "Қасиетті үңгір",
       description: "Нұх аңызымен байланысты ежелгі үңгір",
@@ -46,7 +45,7 @@ const Gallery = () => {
     },
     {
       id: 5,
-      src: mediaConfig.gallery.mountainView5,
+      src: "/images/mountain-view-5.jpg",
       alt: "Қазығұрт тауы үстіндегі күн бату",
       title: "Алтын күн бату",
       description: "Тауды алтын түстерге бояйтын сиқырлы күн бату",
@@ -54,7 +53,7 @@ const Gallery = () => {
     },
     {
       id: 6,
-      src: mediaConfig.gallery.mountainView6,
+      src: "/images/mountain-view-6.jpg",
       alt: "Қазығұрт тауындағы бұлақ",
       title: "Қасиетті көз",
       description: "Емдік суы бар таза тау бұлағы",
@@ -62,7 +61,7 @@ const Gallery = () => {
     },
     {
       id: 7,
-      src: mediaConfig.gallery.mountainView7,
+      src: "/images/mountain-view-7.jpg",
       alt: "Қазығұрт тауының түнгі көрінісі",
       title: "Жұлдызды түн",
       description: "Жұлдызды аспан астындағы тау - сенімсіз сұлулық көрінісі",

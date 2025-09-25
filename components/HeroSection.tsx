@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ChevronDown, Play, Pause, Volume2, VolumeX } from 'lucide-react'
-import { mediaConfig } from '../config/media'
 
 const HeroSection = () => {
   const [isPlaying, setIsPlaying] = useState(false)
@@ -57,9 +56,9 @@ const HeroSection = () => {
           muted={isMuted}
           loop
           playsInline
-          poster={mediaConfig.images.mountainPoster}
+          poster="/images/mountain-poster.jpg"
         >
-          <source src={mediaConfig.videos.mountainHero} type="video/mp4" />
+          <source src="/videos/mountain-hero.mp4" type="video/mp4" />
         </video>
         
         {/* Video Overlay */}
