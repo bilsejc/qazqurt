@@ -3,6 +3,7 @@
 import { useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Mountain, MapPin, Calendar, Users, Star, ChevronRight } from 'lucide-react'
+import Luma3D from './Luma3D'
 
 const AboutSection = () => {
   const [activeFact, setActiveFact] = useState(0)
@@ -146,50 +147,65 @@ const AboutSection = () => {
             ))}
           </motion.div>
 
-          {/* Interactive Image */}
+          {/* Interactive 3D Models */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.6 }}
             className="relative"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <motion.img
-                key={activeFact}
-                initial={{ opacity: 0, scale: 1.1 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                src={features[activeFact].image}
-                alt={features[activeFact].title}
-                className="w-full h-96 object-cover"
-              />
-              
-              {/* Overlay with feature info */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 }}
-                className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6"
-              >
-                <h4 className="text-white text-xl font-semibold mb-2">
-                  {features[activeFact].title}
-                </h4>
-                <p className="text-gray-200 text-sm">
-                  {features[activeFact].description}
-                </p>
-              </motion.div>
+            {/* 3D Models Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* First 3D Model */}
+              <div className="relative">
+                <Luma3D 
+                  modelUrl="https://lumalabs.ai/embed/32e56d87-453b-4164-8346-d259861e81be?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=true&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
+                  title="Қазығұрт тауы - 3D модель 2"
+                  className="h-[300px] sm:h-[400px] md:h-[500px]"
+                />
+                
+                {/* Feature info overlay */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-2xl"
+                >
+                  <h4 className="text-white text-lg font-semibold mb-1">
+                    {features[activeFact].title}
+                  </h4>
+                  <p className="text-gray-200 text-xs">
+                    {features[activeFact].description}
+                  </p>
+                </motion.div>
+              </div>
 
-              {/* Floating elements */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3 shadow-lg"
-              >
-                <Star className="h-6 w-6 text-yellow-500" />
-              </motion.div>
+              {/* Second 3D Model */}
+              <div className="relative">
+                <Luma3D 
+                  modelUrl="https://lumalabs.ai/embed/bd72deb2-1b0a-466f-acc6-309d19044cb4?mode=sparkles&background=%23ffffff&color=%23000000&showTitle=true&loadBg=true&logoPosition=bottom-left&infoPosition=bottom-right&cinematicVideo=undefined&showMenu=false"
+                  title="Қазығұрт тауы - 3D модель"
+                  className="h-[300px] sm:h-[400px] md:h-[500px]"
+                />
+                
+                {/* Additional info overlay */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 }}
+                  className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 rounded-b-2xl"
+                >
+                  <h4 className="text-white text-lg font-semibold mb-1">
+                    Таудың 360° көрінісі
+                  </h4>
+                  <p className="text-gray-200 text-xs">
+                    Қазығұрт тауының толық панорамалық көрінісі
+                  </p>
+                </motion.div>
+              </div>
             </div>
 
-            {/* Image indicators */}
+            {/* Feature indicators */}
             <div className="flex justify-center space-x-2 mt-6">
               {features.map((_, index) => (
                 <motion.button
@@ -207,28 +223,6 @@ const AboutSection = () => {
         </div>
 
         {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-gradient-to-r from-nature-500 to-sky-500 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Бұл керемет тауды өзіңіз үшін ашқыңыз келе ме?
-            </h3>
-            <p className="text-lg mb-6 opacity-90">
-              Қазығұрт тауының сиқырын өздері үшін ашқан мыңдаған саяхатшыларға қосылыңыз
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-nature-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300"
-            >
-              Көбірек білу
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </section>
   )

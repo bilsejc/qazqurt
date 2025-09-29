@@ -77,22 +77,13 @@ const MountainInfo = () => {
                 Қазығұрт тауы
               </h3>
 
-              <div className="relative h-96 bg-gradient-to-b from-sky-200 to-green-300 rounded-xl overflow-hidden">
-                {/* Mountain silhouette */}
-                <div className="absolute bottom-0 left-0 right-0">
-                  <svg viewBox="0 0 400 200" className="w-full h-full">
-                    <path
-                      d="M0,200 L50,150 L100,120 L150,100 L200,80 L250,70 L300,60 L350,50 L400,40 L400,200 Z"
-                      fill="#8B7355"
-                      className="drop-shadow-lg"
-                    />
-                    <path
-                      d="M0,200 L50,160 L100,140 L150,120 L200,100 L250,90 L300,80 L350,70 L400,60 L400,200 Z"
-                      fill="#A0522D"
-                      className="drop-shadow-md"
-                    />
-                  </svg>
-                </div>
+              <div className="relative h-96 rounded-xl overflow-hidden">
+                {/* Mountain Photo */}
+                <img 
+                  src="/images/kazygurt-mountain.jpg" 
+                  alt="Қазығұрт тауы" 
+                  className="w-full h-full object-cover"
+                />
 
                 {/* Interactive Points */}
                 {pointsOfInterest.map((point, index) => (

@@ -2,13 +2,11 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Mountain, Sun, Moon } from 'lucide-react'
-import { useTheme } from 'next-themes'
+import { Menu, X, Mountain } from 'lucide-react'
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,21 +71,8 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* Theme Toggle & Mobile Menu Button */}
+          {/* Mobile Menu Button */}
           <div className="flex items-center space-x-4">
-            <motion.button
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              className="p-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20"
-            >
-              {theme === 'dark' ? (
-                <Sun className="h-5 w-5 text-yellow-500" />
-              ) : (
-                <Moon className="h-5 w-5 text-blue-600" />
-              )}
-            </motion.button>
-
             <motion.button
               onClick={() => setIsOpen(!isOpen)}
               whileHover={{ scale: 1.1 }}

@@ -2,7 +2,11 @@
 
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
+<<<<<<< HEAD
 import { X, ChevronLeft, ChevronRight, Download, Heart, Share2 } from 'lucide-react'
+=======
+import { X, ChevronLeft, ChevronRight, Heart } from 'lucide-react'
+>>>>>>> 05e04f5 (final version)
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
@@ -287,22 +291,6 @@ const Gallery = () => {
                             favorites.includes(selectedImageData.id) ? 'text-red-500 fill-current' : 'text-gray-600'
                           }`} 
                         />
-                      </motion.button>
-                      
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
-                      >
-                        <Share2 className="h-5 w-5 text-gray-600" />
-                      </motion.button>
-                      
-                      <motion.button
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="p-3 bg-gray-100 rounded-full hover:bg-gray-200 transition-colors"
-                      >
-                        <Download className="h-5 w-5 text-gray-600" />
                       </motion.button>
                     </div>
                   </div>

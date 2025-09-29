@@ -147,6 +147,7 @@ const HeroSection = () => {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={togglePlay}
               className="btn-secondary text-lg px-10 py-4"
             >
               Видеоны көру
