@@ -2,11 +2,7 @@
 
 import { useState, useRef } from 'react'
 import { motion, AnimatePresence, useInView } from 'framer-motion'
-<<<<<<< HEAD
-import { X, ChevronLeft, ChevronRight, Download, Heart, Share2 } from 'lucide-react'
-=======
 import { X, ChevronLeft, ChevronRight, Heart } from 'lucide-react'
->>>>>>> 05e04f5 (final version)
 
 const Gallery = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
