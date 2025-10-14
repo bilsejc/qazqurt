@@ -67,28 +67,6 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/50" />
       </motion.div>
 
-      {/* Floating Clouds Animation */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute text-white/20 text-6xl"
-            initial={{ x: -100, y: Math.random() * 100 }}
-            animate={{ 
-              x: 1200,
-              y: Math.random() * 100 
-            }}
-            transition={{
-              duration: 20 + Math.random() * 10,
-              repeat: Infinity,
-              ease: "linear",
-              delay: Math.random() * 5
-            }}
-          >
-            ☁️
-          </motion.div>
-        ))}
-      </div>
 
       {/* Content */}
       <motion.div
